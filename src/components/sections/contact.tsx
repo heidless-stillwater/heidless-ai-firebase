@@ -24,26 +24,51 @@ export default function ContactSection() {
           </p>
         </div>
 
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          <div>
-            <h3 className="font-headline text-2xl font-bold text-foreground">Our Information</h3>
-            <div className="mt-6 space-y-4 text-foreground/80">
-              <div className="flex items-start gap-4">
-                <MapPin className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
-                <span>703a Seven Sisters Road</span>
+        <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+          <div className="space-y-12">
+            <div>
+              <h3 className="font-headline text-2xl font-bold text-foreground">Our Information</h3>
+              <div className="mt-6 space-y-4 text-foreground/80">
+                <div className="flex items-start gap-4">
+                  <MapPin className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
+                  <span>703a Seven Sisters Road</span>
+                </div>
+                <div className="flex items-start gap-4">
+                  <Mail className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
+                  <a href="mailto:test@test.com" className="hover:text-primary transition-colors">test@test.com</a>
+                </div>
+                <div className="flex items-start gap-4">
+                  <Phone className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
+                  <a href="tel:01234567890" className="hover:text-primary transition-colors">0123 456 7890</a>
+                </div>
               </div>
-              <div className="flex items-start gap-4">
-                <Mail className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
-                <a href="mailto:test@test.com" className="hover:text-primary transition-colors">test@test.com</a>
-              </div>
-              <div className="flex items-start gap-4">
-                <Phone className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
-                <a href="tel:01234567890" className="hover:text-primary transition-colors">0123 456 7890</a>
-              </div>
+            </div>
+            
+            <div>
+              <h3 className="font-headline text-2xl font-bold text-foreground">Send Us a Message</h3>
+              <form className="mt-6 space-y-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      <div className="space-y-2">
+                          <Label htmlFor="name">Name</Label>
+                          <Input id="name" type="text" placeholder="Your Name" />
+                      </div>
+                      <div className="space-y-2">
+                          <Label htmlFor="email">Email</Label>
+                          <Input id="email" type="email" placeholder="your@email.com" />
+                      </div>
+                  </div>
+                  <div className="space-y-2">
+                      <Label htmlFor="message">Message</Label>
+                      <Textarea id="message" placeholder="Tell us about your project..." className="min-h-[150px]"/>
+                  </div>
+                  <div>
+                      <Button type="submit" size="lg" className="w-full">Send Message</Button>
+                  </div>
+              </form>
             </div>
           </div>
 
-          <div className="h-[400px] w-full rounded-lg overflow-hidden shadow-lg border border-border">
+          <div className="sticky top-24 h-[400px] md:h-auto md:min-h-[600px] w-full rounded-lg overflow-hidden shadow-lg border border-border">
             {mapActive ? (
               <iframe
                 src={`https://maps.google.com/maps?q=${encodedAddress}&t=&z=15&ie=UTF8&iwloc=&output=embed`}
@@ -66,29 +91,6 @@ export default function ContactSection() {
               </div>
             )}
           </div>
-        </div>
-        
-        <div className="mt-16 max-w-2xl mx-auto">
-            <h3 className="font-headline text-2xl font-bold text-center">Send Us a Message</h3>
-            <form className="mt-6 space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div className="space-y-2">
-                        <Label htmlFor="name">Name</Label>
-                        <Input id="name" type="text" placeholder="Your Name" />
-                    </div>
-                    <div className="space-y-2">
-                        <Label htmlFor="email">Email</Label>
-                        <Input id="email" type="email" placeholder="your@email.com" />
-                    </div>
-                </div>
-                <div className="space-y-2">
-                    <Label htmlFor="message">Message</Label>
-                    <Textarea id="message" placeholder="Tell us about your project..." className="min-h-[150px]"/>
-                </div>
-                <div>
-                    <Button type="submit" size="lg" className="w-full">Send Message</Button>
-                </div>
-            </form>
         </div>
       </div>
     </section>
