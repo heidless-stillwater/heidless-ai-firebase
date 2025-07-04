@@ -14,7 +14,7 @@ export default function ContactSection() {
 
   return (
     <section id="contact" className="py-16 sm:py-24">
-      <div className="container mx-auto">
+      <div className="w-[90%] mx-auto">
         <div className="text-center">
           <h2 className="font-headline text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
             Get In Touch
@@ -24,7 +24,7 @@ export default function ContactSection() {
           </p>
         </div>
 
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
           <div className="space-y-12">
             <div>
               <h3 className="font-headline text-2xl font-bold text-foreground">Our Information</h3>
@@ -68,12 +68,13 @@ export default function ContactSection() {
             </div>
           </div>
 
-          <div className="sticky top-24 h-[400px] md:h-full w-full rounded-lg overflow-hidden shadow-lg border border-border">
+          <div className="sticky top-24 h-full w-full rounded-lg overflow-hidden shadow-lg border border-border min-h-[400px]">
             {mapActive ? (
               <iframe
                 src={`https://maps.google.com/maps?q=${encodedAddress}&t=&z=15&ie=UTF8&iwloc=&output=embed`}
                 width="100%"
                 height="100%"
+                className="absolute inset-0"
                 style={{ border: 0 }}
                 allowFullScreen={true}
                 loading="lazy"
