@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Menu, Bot } from 'lucide-react';
+import { SignedIn, SignedOut, UserButton, SignInButton, SignUpButton } from '@clerk/nextjs';
 
 const navLinks = [
   { href: '/', label: 'Home' },
@@ -35,9 +36,17 @@ export default function Header() {
           ))}
         </nav>
         <div className="flex flex-1 items-center justify-end gap-2">
-          <Link href="/#ai-assistant">
-            <Button>AI Style Assistant</Button>
-          </Link>
+          <SignedIn>
+            <UserButton />
+          </SignedIn>
+          <SignedOut>
+              <SignInButton mode="modal">
+                  <Button variant="outline" size="sm">Sign In</Button>
+              </SignInButton>
+              <SignUpButton mode="modal">
+                  <Button size="sm">Sign Up</Button>
+              </SignUpButton>
+          </SignedOut>
           <Sheet>
             <SheetTrigger asChild>
               <Button variant="outline" size="icon" className="md:hidden">
