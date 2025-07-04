@@ -24,7 +24,7 @@ export default function ContactSection() {
           </p>
         </div>
 
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+        <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-12">
           <div className="space-y-12">
             <div>
               <h3 className="font-headline text-2xl font-bold text-foreground">Our Information</h3>
@@ -68,7 +68,7 @@ export default function ContactSection() {
             </div>
           </div>
 
-          <div className="sticky top-24 h-[400px] md:h-auto md:min-h-[600px] w-full rounded-lg overflow-hidden shadow-lg border border-border">
+          <div className="sticky top-24 h-[400px] md:h-full w-full rounded-lg overflow-hidden shadow-lg border border-border">
             {mapActive ? (
               <iframe
                 src={`https://maps.google.com/maps?q=${encodedAddress}&t=&z=15&ie=UTF8&iwloc=&output=embed`}
