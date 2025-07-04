@@ -91,7 +91,7 @@ const slugify = (text: string) => text.toLowerCase().replace(/[^a-z0-9]+/g, '-')
 
 export default function AIToolsSection() {
   return (
-    <div className="w-full lg:w-[90%] mx-auto py-16 sm:py-24 px-4 sm:px-6 lg:px-8">
+    <div className="w-full lg:w-[95%] mx-auto py-16 sm:py-24 px-4 sm:px-6 lg:px-8">
       <div className="text-center">
         <h1 className="font-headline text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
           AI Tools for Your Profession
