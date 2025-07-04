@@ -1,8 +1,8 @@
 'use client';
 
-import { useFormState, useFormStatus } from 'react-dom';
+import { useFormStatus } from 'react-dom';
 import { generateStyleSuggestions, type FormState } from '@/app/actions';
-import { useEffect } from 'react';
+import { useEffect, useActionState } from 'react';
 import { useToast } from '@/hooks/use-toast';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -34,7 +34,7 @@ function SubmitButton() {
 }
 
 export function AIStyleAssistantForm() {
-  const [state, formAction] = useFormState(generateStyleSuggestions, initialState);
+  const [state, formAction] = useActionState(generateStyleSuggestions, initialState);
   const { toast } = useToast();
 
   useEffect(() => {
