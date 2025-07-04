@@ -9,7 +9,7 @@ const navLinks = [
   { href: '/#services', label: 'Services' },
   { href: '/pricing', label: 'Pricing' },
   { href: '/support', label: 'Support' },
-  { href: '/ai-tools', label: 'AI Tools' },
+  { href: '/ai-tools', label: 'AI Tools', protected: true },
   { href: '/#portfolio', label: 'Portfolio' },
   { href: '/contact', label: 'Contact' },
 ];
@@ -25,15 +25,29 @@ export default function Header() {
           </Link>
         </div>
         <nav className="hidden md:flex items-center gap-4 text-sm justify-center">
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className="text-foreground/60 transition-colors hover:text-foreground/80"
-            >
-              {link.label}
-            </Link>
-          ))}
+          {navLinks.map((link) => {
+            if (link.protected) {
+              return (
+                <SignedIn key={link.href}>
+                  <Link
+                    href={link.href}
+                    className="text-foreground/60 transition-colors hover:text-foreground/80"
+                  >
+                    {link.label}
+                  </Link>
+                </SignedIn>
+              );
+            }
+            return (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="text-foreground/60 transition-colors hover:text-foreground/80"
+              >
+                {link.label}
+              </Link>
+            );
+          })}
         </nav>
         <div className="flex flex-1 items-center justify-end gap-2">
           <SignedIn>
@@ -56,15 +70,29 @@ export default function Header() {
             </SheetTrigger>
             <SheetContent side="right">
               <div className="flex flex-col gap-4 mt-8">
-                {navLinks.map((link) => (
-                  <Link
-                    key={link.href}
-                    href={link.href}
-                    className="text-lg font-medium text-foreground/80 transition-colors hover:text-foreground"
-                  >
-                    {link.label}
-                  </Link>
-                ))}
+                {navLinks.map((link) => {
+                  if (link.protected) {
+                    return (
+                      <SignedIn key={link.href}>
+                        <Link
+                          href={link.href}
+                          className="text-lg font-medium text-foreground/80 transition-colors hover:text-foreground"
+                        >
+                          {link.label}
+                        </Link>
+                      </SignedIn>
+                    );
+                  }
+                  return (
+                    <Link
+                      key={link.href}
+                      href={link.href}
+                      className="text-lg font-medium text-foreground/80 transition-colors hover:text-foreground"
+                    >
+                      {link.label}
+                    </Link>
+                  );
+                })}
               </div>
             </SheetContent>
           </Sheet>

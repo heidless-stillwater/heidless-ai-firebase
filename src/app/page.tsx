@@ -5,6 +5,7 @@ import ServicesSection from '@/components/sections/services';
 import PortfolioSection from '@/components/sections/portfolio';
 import AIStyleAssistantSection from '@/components/sections/ai-assistant';
 import PricingSection from '@/components/sections/pricing';
+import ExploreAISection from '@/components/sections/explore-ai';
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
         <ServicesSection />
         <PricingSection />
         <PortfolioSection />
+        <ExploreAISection />
         <AIStyleAssistantSection />
       </main>
       <Footer />
