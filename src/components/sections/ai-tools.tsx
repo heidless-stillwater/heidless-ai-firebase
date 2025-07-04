@@ -91,7 +91,7 @@ const slugify = (text: string) => text.toLowerCase().replace(/[^a-z0-9]+/g, '-')
 
 export default function AIToolsSection() {
   return (
-    <div className="container mx-auto py-16 sm:py-24">
+    <div className="w-full lg:w-[90%] mx-auto py-16 sm:py-24 px-4 sm:px-6 lg:px-8">
       <div className="text-center">
         <h1 className="font-headline text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
           AI Tools for Your Profession
@@ -101,7 +101,7 @@ export default function AIToolsSection() {
         </p>
       </div>
 
-      <nav className="sticky top-14 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 py-4 z-40 -mx-4 px-4 border-b border-t border-border/40 mt-8">
+      <nav className="sticky top-14 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 py-4 z-40 -mx-4 px-4 sm:-mx-6 lg:-mx-8 sm:px-6 lg:px-8 border-b border-t border-border/40 mt-8">
         <div className="flex flex-wrap justify-center gap-2 max-w-[calc(100%-100px)] mx-auto">
           {toolSections.map((section) => (
             <Link key={section.id} href={`#${section.id}`} passHref>
