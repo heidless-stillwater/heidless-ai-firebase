@@ -3,7 +3,7 @@ import { AIStyleAssistantForm } from "@/components/ai-style-assistant-form";
 export default function AIStyleAssistantSection() {
   return (
     <section id="ai-assistant" className="py-16 sm:py-24 bg-secondary">
-      <div className="container mx-auto">
+      <div className="w-[95%] mx-auto">
         <div className="text-center max-w-3xl mx-auto">
           <h2 className="font-headline text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
             AI-Powered Style Assistant

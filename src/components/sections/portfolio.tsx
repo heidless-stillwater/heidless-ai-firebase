@@ -31,7 +31,7 @@ const projects = [
 export default function PortfolioSection() {
   return (
     <section id="portfolio" className="py-16 sm:py-24">
-      <div className="container mx-auto">
+      <div className="w-[95%] mx-auto">
         <div className="text-center">
           <h2 className="font-headline text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
             Our Portfolio
