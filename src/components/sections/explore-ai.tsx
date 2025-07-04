@@ -4,6 +4,18 @@ import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { SignedIn, SignedOut, SignInButton } from '@clerk/nextjs';
 import { Sparkles } from 'lucide-react';
+import React from 'react';
+
+// This wrapper component prevents passing the `afterSignInUrl` prop from Clerk's
+// SignInButton to the underlying DOM button, which avoids a React warning.
+const SafeButtonForClerk = React.forwardRef<
+  HTMLButtonElement,
+  React.ComponentProps<typeof Button>
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+>(({ afterSignInUrl, ...props }: any, ref) => {
+  return <Button {...props} ref={ref} />;
+});
+SafeButtonForClerk.displayName = 'SafeButtonForClerk';
 
 export default function ExploreAISection() {
   return (
@@ -27,10 +39,10 @@ export default function ExploreAISection() {
             </SignedIn>
             <SignedOut>
               <SignInButton mode="modal" afterSignInUrl="/ai-tools">
-                <Button size="lg">
+                <SafeButtonForClerk size="lg">
                     <Sparkles className="mr-2 h-5 w-5" />
                     Explore AI Tools
-                </Button>
+                </SafeButtonForClerk>
               </SignInButton>
             </SignedOut>
           </div>
