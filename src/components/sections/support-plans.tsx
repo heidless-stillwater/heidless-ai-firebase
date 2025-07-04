@@ -3,85 +3,83 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Check } from "lucide-react";
 import Link from "next/link";
 
-const tiers = [
+const supportTiers = [
   {
-    name: "Brochure",
-    price: "£399",
-    priceSuffix: "one-time",
-    description: "Perfect for Small Businesses and Individuals",
-    features: [
-      "Secure your foot-hold on the Web",
-      "Excellent Foundation for your Web Presence",
-      "Single Page Application",
-      "Mobile-Responsive Design",
-      "ChatBot + 1 AI Functions tailored to your Profession",
-      "First Year 'standard' Support Plan included",
-    ],
-    buttonLabel: "Get Started",
-    buttonLink: "#contact",
-  },
-  {
-    name: "Pro",
-    price: "£599",
-    priceSuffix: "one-time",
-    description: "Optimal for Small Businesses and Individuals",
-    features: [
-      "Everything in Brochure Plan",
-      "Up to 5 pages allowing you to expand on your offering",
-      "3 AI Functions tailored to your Profession/Service",
-      "First Year 'standard' Support Plan included",
-    ],
-    buttonLabel: "Choose Pro",
-    buttonLink: "#contact",
-  },
-  {
-    name: "Premium",
-    price: "Call us",
-    priceSuffix: "for a Quote",
-    description: "For businesses ready to scale and sell online",
-    features: [
-      "Everything in Pro Plan",
-      "Up to 10 pages",
-      "E-commerce Integration",
-      "5 AI Functions",
-      "Advanced SEO & Analytics",
-      "First Year 'premium' Support Plan included",
-    ],
-    buttonLabel: "Choose Premium",
-    buttonLink: "#contact",
-  },
-  {
-    name: "Support/After-care",
-    price: "From £49",
+    name: "Standard Support",
+    price: "£49",
     priceSuffix: "/month",
-    description: "Ongoing peace of mind for your digital asset",
+    description: "Essential maintenance and support.",
     features: [
-      "Ongoing Maintenance",
-      "Security & Plugin Updates",
+      "Weekly Plugin & Security Updates",
       "Monthly Performance Reports",
-      "Pro-Active Support",
-      "Priority Issue Support",
+      "Email Support (24hr response)",
+      "1 Hour of Content Updates per Month",
     ],
-    buttonLabel: "Find Out More",
-    buttonLink: "/support",
+    buttonLabel: "Select Plan",
+    buttonLink: "#contact",
+  },
+  {
+    name: "Business Support",
+    price: "£99",
+    priceSuffix: "/month",
+    description: "For growing businesses needing more.",
+    features: [
+      "Everything in Standard",
+      "Daily Backups",
+      "Priority Email Support (12hr response)",
+      "3 Hours of Content Updates per Month",
+      "Pro-Active Uptime Monitoring",
+    ],
+    buttonLabel: "Select Plan",
+    buttonLink: "#contact",
+  },
+  {
+    name: "Premium Support",
+    price: "£199",
+    priceSuffix: "/month",
+    description: "Comprehensive support for mission-critical sites.",
+    features: [
+      "Everything in Business",
+      "Real-time Backups",
+      "Phone & Email Support (4hr response)",
+      "5 Hours of Content/Dev Updates per Month",
+      "Staging Environment",
+    ],
+    buttonLabel: "Select Plan",
+    buttonLink: "#contact",
+  },
+  {
+    name: "Enterprise Support",
+    price: "Custom",
+    priceSuffix: "pricing",
+    description: "Dedicated support for large-scale operations.",
+    features: [
+      "Everything in Premium",
+      "Dedicated Account Manager",
+      "24/7 Emergency Support",
+      "Unlimited Small Jobs",
+      "Custom Service Level Agreement (SLA)",
+    ],
+    buttonLabel: "Contact Us",
+    buttonLink: "#contact",
   },
 ];
 
-export default function PricingSection() {
+export default function SupportPlansSection() {
   return (
-    <section id="pricing" className="py-16 sm:py-24">
+    <section id="support-plans" className="py-16 sm:py-24">
       <div className="container mx-auto">
         <div className="text-center max-w-4xl mx-auto">
           <h2 className="font-headline text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-            Choose a plan that fits your needs. Simple, transparent pricing
+            Our Support & After-care Plans
           </h2>
           <p className="mt-4 text-lg leading-8 text-foreground/80">
-            We use AI to streamline our process. This saves us time & costs. We pass those savings on to you.
+            Keep your website secure, updated, and performing at its best with our comprehensive support plans.
           </p>
         </div>
 
         <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4 items-start">
-          {tiers.map((tier) => (
+          {supportTiers.map((tier) => (
             <Card key={tier.name} className="flex flex-col h-full hover:shadow-xl transition-shadow duration-300">
               <CardHeader className="flex-shrink-0">
                 <CardTitle className="font-headline text-2xl">{tier.name}</CardTitle>
