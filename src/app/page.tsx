@@ -4,7 +4,6 @@ import HeroSection from '@/components/sections/hero';
 import ServicesSection from '@/components/sections/services';
 import PortfolioSection from '@/components/sections/portfolio';
 import AIStyleAssistantSection from '@/components/sections/ai-assistant';
-import ContactSection from '@/components/sections/contact';
 import PricingSection from '@/components/sections/pricing';
 
 export default function Home() {
@@ -17,7 +16,6 @@ export default function Home() {
         <PricingSection />
         <PortfolioSection />
         <AIStyleAssistantSection />
-        <ContactSection />
       </main>
       <Footer />
     </div>
