@@ -16,7 +16,7 @@ const supportTiers = [
       "1 Hour of Content Updates per Month",
     ],
     buttonLabel: "Select Plan",
-    buttonLink: "#contact",
+    buttonLink: "/contact",
   },
   {
     name: "Business Support",
@@ -31,7 +31,7 @@ const supportTiers = [
       "Pro-Active Uptime Monitoring",
     ],
     buttonLabel: "Select Plan",
-    buttonLink: "#contact",
+    buttonLink: "/contact",
   },
   {
     name: "Premium Support",
@@ -46,7 +46,7 @@ const supportTiers = [
       "Staging Environment",
     ],
     buttonLabel: "Select Plan",
-    buttonLink: "#contact",
+    buttonLink: "/contact",
   },
   {
     name: "Enterprise Support",
@@ -61,7 +61,7 @@ const supportTiers = [
       "Custom Service Level Agreement (SLA)",
     ],
     buttonLabel: "Contact Us",
-    buttonLink: "#contact",
+    buttonLink: "/contact",
   },
 ];
 

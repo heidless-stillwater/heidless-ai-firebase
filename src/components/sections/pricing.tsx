@@ -18,7 +18,7 @@ const tiers = [
       "First Year 'standard' Support Plan included",
     ],
     buttonLabel: "Get Started",
-    buttonLink: "#contact",
+    buttonLink: "/contact",
   },
   {
     name: "Pro",
@@ -32,7 +32,7 @@ const tiers = [
       "First Year 'standard' Support Plan included",
     ],
     buttonLabel: "Choose Pro",
-    buttonLink: "#contact",
+    buttonLink: "/contact",
   },
   {
     name: "Premium",
@@ -48,7 +48,7 @@ const tiers = [
       "First Year 'premium' Support Plan included",
     ],
     buttonLabel: "Choose Premium",
-    buttonLink: "#contact",
+    buttonLink: "/contact",
   },
   {
     name: "Support/After-care",

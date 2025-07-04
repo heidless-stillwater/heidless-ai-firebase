@@ -11,20 +11,20 @@ const navLinks = [
   { href: '/support', label: 'Support' },
   { href: '/ai-tools', label: 'AI Tools' },
   { href: '/#portfolio', label: 'Portfolio' },
-  { href: '/#contact', label: 'Contact' },
+  { href: '/contact', label: 'Contact' },
 ];
 
 export default function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="w-[95%] mx-auto flex h-14 items-center">
-        <div className="flex-1">
+        <div className="flex-1 flex justify-start">
           <Link href="/" className="flex items-center gap-2">
             <Bot className="h-6 w-6 text-primary" />
             <span className="font-bold font-headline text-lg">heidless ai</span>
           </Link>
         </div>
-        <nav className="hidden md:flex items-center gap-4 text-sm">
+        <nav className="hidden md:flex items-center gap-4 text-sm justify-center">
           {navLinks.map((link) => (
             <Link
               key={link.href}
