@@ -5,6 +5,7 @@ import ServicesSection from '@/components/sections/services';
 import PortfolioSection from '@/components/sections/portfolio';
 import AIStyleAssistantSection from '@/components/sections/ai-assistant';
 import ContactSection from '@/components/sections/contact';
+import PricingSection from '@/components/sections/pricing';
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <main className="flex-1">
         <HeroSection />
         <ServicesSection />
+        <PricingSection />
         <PortfolioSection />
         <AIStyleAssistantSection />
         <ContactSection />
