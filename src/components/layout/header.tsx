@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Menu, Bot } from 'lucide-react';
 import { SignedIn, SignedOut, UserButton, SignInButton, SignUpButton } from '@clerk/nextjs';
+import { ThemeToggle } from '../theme-toggle';
 
 const navLinks = [
   { href: '/', label: 'Home' },
@@ -50,6 +51,7 @@ export default function Header() {
           })}
         </nav>
         <div className="flex flex-1 items-center justify-end gap-2">
+          <ThemeToggle />
           <SignedIn>
             <UserButton />
           </SignedIn>
