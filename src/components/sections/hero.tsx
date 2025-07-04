@@ -4,7 +4,7 @@ import Link from 'next/link';
 export default function HeroSection() {
   return (
     <section id="home" className="py-24 sm:py-32 md:py-40">
-      <div className="container mx-auto text-center">
+      <div className="w-[95%] mx-auto text-center">
         <h1 className="font-headline text-4xl font-bold tracking-tight text-foreground sm:text-6xl lg:text-7xl">
           Crafting the Future of the Web with AI-Powered Design
         </h1>
